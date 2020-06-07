@@ -1,0 +1,86 @@
+jhonygal8
+yonatan gal
+204292999
+
+I discussed this exercise with gil grimberg and miri aframov.
+
+
+===================================
+=    README for ex9: Rush Hour    =
+===================================
+
+==================
+=  Description:  =
+==================
+
+in this exercise we wrote a program which creates the famous game rush hour.
+we used OOP in this exercise.
+
+i'll write about the functions that I've wrote:
+
+class car:
+
+1. __init__(self, name, length, location, orientation):
+    A constructor for a Car object
+
+2. car_coordinates(self): returns the coordinates on the board
+   which the car is in.
+
+3. possible_moves(self): returns A dictionary of strings describing possible
+   movements permitted by this car.
+
+4. movement_requirements(self, movekey): returns a list of cell locations
+   that need to empty in order for the car to move in the movekey direction.
+
+5. move(self, movekey): moves the car to a given direction.
+
+class board:
+
+1. __str__(self): prints the board.
+
+2. cell_list(self): This function returns the coordinates of cells in
+   the board.
+
+3. possible_moves(self): This function returns the legal moves
+   all cars in the board, with a dictionary.
+   has under it 4 sub-functions, each checks if a move is valid and update
+   the dictionary accordingly.
+
+4. target_location(self): returns the cell location which if the car is in
+   it wins the game.
+
+5. cell_content(self, coordinate): returns None if the coordinate is empty,
+   or the car name if it's not empty.
+
+6. add_car(self, car): adds a car to the board, if possible. returns True for
+   success and False for failure.
+
+7. move_car(self, name, movekey): moves a given car to a given direction,
+   if possible. returns True upon success, False otherwise.
+   has 4 sub-functions, each checks valid of the movekey and makes the move
+   if possible.
+
+class game:
+
+1. __single_turn(self): this function asks for input from the user,
+   then checks if it's valid, and if it it valid it moves a car according to
+   the input.
+
+2. play(self): The main driver of the Game. Manages the game until completion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
